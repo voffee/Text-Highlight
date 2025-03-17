@@ -1,10 +1,95 @@
 
 /* Declaring CSS variables */
 :root {
+    /* Linear gradient colors for the page bg */
+    --page-color-1: #FAEADD;
+    --page-color-2: #FBCF4F;
+    --page-color-3: #F29CB7;
 
+    /* Linear gradient colors for the card bg */
+    --card-color-1: #45FF9A;
+    --card-color-2: #2AF0FF;
+    --card-color-3: #D383FF;
+    --card-color-4: #FE4880;
+
+    /* Ribbon color */
+    --ribbon-color: #ED2939;
+
+    /* Generic black color for font */
+    --dark-text-color: #36454F;
 }
 
 /* Global Reset */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    height: 100vh;
+    background-image: linear-gradient(180deg, 
+    var(--page-color-1) 0%, 
+    var(--page-color-2) 50%, 
+    var(--page-color-3) 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+}
+
+.ribbon {
+    height: 40px;
+    padding: 5px;
+    background-color: var(--ribbon-color);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ribbon p {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3 {
+    
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px 0px 10px 0px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.card-1-container {
+    background-color: red;
+}
+.card-3-container {
+    background-color: green;
+}
+
+img {
+    height: auto;
+    width: 70%;
+    opacity: 0.9;
 }

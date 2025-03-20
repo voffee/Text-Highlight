@@ -105,7 +105,7 @@ h1 {
 }
 
 .link:visited {
-    color: black;
+    color: var(--dark-text-color);
 }
 
 .link:hover {
@@ -153,6 +153,8 @@ h1 {
 
     transform: rotateY(180deg);
     backface-visibility: hidden;
+
+    text-align: center;
     /* position: absolute; */
 }
 
@@ -189,6 +191,12 @@ h1 {
 
     transform: rotateY(180deg);
     backface-visibility: hidden;
+
+    text-align: center;
+}
+
+.card-1-front p, .card-2-front p {
+    color: var(--dark-text-color);
 }
 
 .card-3-container {
@@ -202,12 +210,21 @@ h1 {
     background-image: linear-gradient(135deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
 }
 
+/* Image related styling */
+
 img {
     height: auto;
     width: 100%;
     opacity: 0.9;
 
     border-radius: 10px 10px 0px 0px;
+}
+
+.img-intro {
+    font-family: "Esteban", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14px;
 }
 
 /* Card-shared font styling */
@@ -233,13 +250,32 @@ img {
     justify-content: center;
 }
 
-.card-3-single :first-child {
+#card-3-title {
     font-size: 16px;
     font-weight: 600;
+    margin-bottom: 4px;
+
+    color: var(--dark-text-color);
 }
-.card-3-single :last-child {
-    font-size: 14px;
-    font-weight: 100;
+
+#card-3-content {
+    font-size: 13px;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.spoiler-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+    color: black;
+    transition: 0.7s;
+    box-shadow: inset 0px -18px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.spoiler-link:focus {
+    transition: 0.7s;
+    box-shadow: inset 0px -18px 0px 0px rgba(254, 72, 128, 1);
 }
 
 /* JS Flipping Class */

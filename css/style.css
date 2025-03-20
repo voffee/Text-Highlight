@@ -146,6 +146,10 @@ h1 {
     height: 330px;
     width: 220px;
     border-radius: 20px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+
+    background-image: linear-gradient(135deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
 
     transform: rotateY(180deg);
     backface-visibility: hidden;
@@ -177,6 +181,9 @@ h1 {
 .card-2-back {
     height: 330px;
     width: 220px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+
     background-image: linear-gradient(90deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
     border-radius: 20px;
 
@@ -199,6 +206,8 @@ img {
     height: auto;
     width: 100%;
     opacity: 0.9;
+
+    border-radius: 10px 10px 0px 0px;
 }
 
 /* Card-shared font styling */

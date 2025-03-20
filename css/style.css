@@ -106,7 +106,6 @@ h1 {
 
 .link:visited {
     color: black;
-    /* box-shadow: inset 0px -2px 0px 0px rgba(254, 72, 128, 1); */
 }
 
 .link:hover {
@@ -137,8 +136,10 @@ h1 {
     width: 220px;
     border-radius: 20px;
     background-image: linear-gradient(135deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
 
     position: absolute;
+    backface-visibility: hidden;
 }
 
 .card-1-back {
@@ -146,11 +147,19 @@ h1 {
     width: 220px;
     border-radius: 20px;
 
-    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    /* position: absolute; */
 }
 
 .card-2-container {
     padding: 0px 10px 0px 10px;
+
+    cursor: pointer;
+    position: relative;
+
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
 }
 
 .card-2-front {
@@ -158,6 +167,11 @@ h1 {
     width: 220px;
     border-radius: 20px;
     background-image: linear-gradient(135deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
+
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .card-2-back {
@@ -165,7 +179,9 @@ h1 {
     width: 220px;
     background-image: linear-gradient(90deg, var(--card-color-1) 5%, var(--card-color-2) 40%, var(--card-color-3) 70%, var(--card-color-4) 100%);
     border-radius: 20px;
-    display: none;
+
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 .card-3-container {
